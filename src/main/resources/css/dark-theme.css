@@ -1,0 +1,27 @@
+.root-pane { -fx-background-color: #0f1117; -fx-font-family: "Inter", "Segoe UI", "Roboto", sans-serif; }
+.content-area { -fx-background-color: #0f1117; -fx-padding: 24; }
+.sidebar { -fx-background-color: #161a23; -fx-padding: 20 12 20 12; -fx-border-color: #232838; -fx-border-width: 0 1 0 0; }
+.brand { -fx-text-fill: #e6e9f0; -fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 0 0 20 12; }
+.menu-item, .submenu-item {
+    -fx-background-color: transparent; -fx-text-fill: #9aa3b5; -fx-font-size: 14px;
+    -fx-alignment: CENTER_LEFT; -fx-padding: 12 16; -fx-background-radius: 8; -fx-cursor: hand;
+}
+.submenu-item { -fx-padding: 10 16 10 36; -fx-font-size: 13px; }
+.menu-item:hover, .submenu-item:hover { -fx-background-color: #1f2535; -fx-text-fill: #ffffff; }
+.menu-item.active, .submenu-item.active { -fx-background-color: #2d6cdf; -fx-text-fill: #ffffff; }
+.page-title { -fx-text-fill: #e6e9f0; -fx-font-size: 24px; -fx-font-weight: bold; }
+.card { -fx-background-color: #161a23; -fx-background-radius: 12; -fx-border-color: #232838; -fx-border-radius: 12; -fx-padding: 40; }
+.primary-button {
+    -fx-background-color: #2d6cdf; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold;
+    -fx-padding: 12 40; -fx-background-radius: 8; -fx-cursor: hand;
+}
+.primary-button:hover { -fx-background-color: #4180f0; }
+.primary-button:disabled { -fx-opacity: 0.5; }
+.status-connected { -fx-text-fill: #3ddc84; -fx-font-size: 14px; }
+.status-connecting { -fx-text-fill: #f5b942; -fx-font-size: 14px; }
+.status-disconnected { -fx-text-fill: #ef5350; -fx-font-size: 14px; }
+.secondary-button {
+    -fx-background-color: transparent; -fx-text-fill: #9aa3b5; -fx-font-size: 14px;
+    -fx-border-color: #2c3347; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10 40; -fx-cursor: hand;
+}
+.secondary-button:hover { -fx-background-color: #1f2535; -fx-text-fill: #ffffff; }

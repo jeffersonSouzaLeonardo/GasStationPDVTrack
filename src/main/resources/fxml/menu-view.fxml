@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.br.manager.controller.MenuController" styleClass="root-pane">
+    <left>
+        <VBox styleClass="sidebar" prefWidth="260" minWidth="220" spacing="4">
+            <Label text="GAS STATION PDV" styleClass="brand"/>
+            <Button fx:id="commandsButton" text="Comandas" styleClass="menu-item" maxWidth="Infinity" onAction="#onCommands"/>
+            <Button fx:id="fuelingsButton" text="Abastecimentos" styleClass="menu-item" maxWidth="Infinity" onAction="#onFuelings"/>
+            <Button fx:id="shiftButton" text="Turno/Caixa" styleClass="menu-item" maxWidth="Infinity" onAction="#onShift"/>
+            <Button fx:id="settingsButton" text="Configurações  ▾" styleClass="menu-item" maxWidth="Infinity" onAction="#onSettings"/>
+            <VBox fx:id="settingsSubmenu" spacing="4">
+                <Button fx:id="concentratorButton" text="Concentrador" styleClass="submenu-item" maxWidth="Infinity" onAction="#onConcentrator"/>
+                <Button fx:id="userButton" text="Usuário" styleClass="submenu-item" maxWidth="Infinity" onAction="#onUser"/>
+            </VBox>
+        </VBox>
+    </left>
+    <center>
+        <StackPane fx:id="contentArea" styleClass="content-area"/>
+    </center>
+</BorderPane>

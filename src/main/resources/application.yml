@@ -1,0 +1,15 @@
+spring:
+  main:
+    web-application-type: none
+    banner-mode: "off"
+
+horustech:
+  # When true, the connection with the concentrator is opened on application startup
+  enabled: false
+  #host: 192.168.0.250
+  host: localhost
+  # Port 2001 is the one intended for pump-side (management) systems
+  port: 2001
+  connect-timeout-ms: 3000
+  read-timeout-ms: 3000
+  polling-interval-ms: 500
