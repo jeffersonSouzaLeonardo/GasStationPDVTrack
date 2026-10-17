@@ -10,13 +10,24 @@ import java.util.stream.Collectors;
 
 @Component
 public class NozzleMapper {
+
+    private final PumpMapper pumpMapper;
+    private final TankMapper tankMapper;
+    private final ProductMapper productMapper;
+
+    public NozzleMapper(PumpMapper pumpMapper, TankMapper tankMapper, ProductMapper productMapper) {
+        this.pumpMapper = pumpMapper;
+        this.tankMapper = tankMapper;
+        this.productMapper = productMapper;
+    }
+
     public Nozzle toEntity(NozzleInputDTO dto) {
         if (dto == null) return null;
         Nozzle n = new Nozzle();
-        n.setPumpId(dto.getPumpId());
-        n.setTankId(dto.getTankId());
+        n.setPump(dto.getPump());
+        n.setTank(dto.getTank());
         n.setCode(dto.getCode());
-        n.setProductId(dto.getProductId());
+        n.setProduct(dto.getProduct());
         n.setMeterNumber(dto.getMeterNumber());
         n.setActive(dto.getActive() != null ? dto.getActive() : Boolean.TRUE);
         return n;
@@ -26,10 +37,10 @@ public class NozzleMapper {
         if (n == null) return null;
         NozzleResponseDTO dto = new NozzleResponseDTO();
         dto.setId(n.getId());
-        dto.setPumpId(n.getPumpId());
-        dto.setTankId(n.getTankId());
+        dto.setPump(pumpMapper.toDto(n.getPump()));
+        dto.setTank(tankMapper.toDto(n.getTank()));
         dto.setCode(n.getCode());
-        dto.setProductId(n.getProductId());
+        dto.setProduct(productMapper.toDto(n.getProduct()));
         dto.setMeterNumber(n.getMeterNumber());
         dto.setActive(n.getActive());
         return dto;
@@ -42,10 +53,10 @@ public class NozzleMapper {
 
     public void updateFromDto(NozzleInputDTO dto, Nozzle entity) {
         if (dto == null || entity == null) return;
-        entity.setPumpId(dto.getPumpId());
-        entity.setTankId(dto.getTankId());
+        entity.setPump(dto.getPump());
+        entity.setTank(dto.getTank());
         entity.setCode(dto.getCode());
-        entity.setProductId(dto.getProductId());
+        entity.setProduct(dto.getProduct());
         entity.setMeterNumber(dto.getMeterNumber());
         if (dto.getActive() != null) entity.setActive(dto.getActive());
     }

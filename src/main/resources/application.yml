@@ -2,6 +2,7 @@ spring:
   main:
     web-application-type: none
     banner-mode: "off"
+  port: 8081
 
 horustech:
   # When true, the connection with the concentrator is opened on application startup

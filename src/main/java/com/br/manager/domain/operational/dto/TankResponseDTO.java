@@ -6,7 +6,7 @@ import java.util.UUID;
 public class TankResponseDTO {
     private UUID id;
     private String code;
-    private UUID productId;
+    private ProductResponseDTO product;
     private BigDecimal capacityLiters;
     private BigDecimal deadStockLiters;
     private BigDecimal currentBookLiters;
@@ -16,8 +16,8 @@ public class TankResponseDTO {
     public void setId(UUID id) { this.id = id; }
     public String getCode() { return code; }
     public void setCode(String code) { this.code = code; }
-    public UUID getProductId() { return productId; }
-    public void setProductId(UUID productId) { this.productId = productId; }
+    public ProductResponseDTO getProduct() { return product; }
+    public void setProduct(ProductResponseDTO product) { this.product = product; }
     public BigDecimal getCapacityLiters() { return capacityLiters; }
     public void setCapacityLiters(BigDecimal capacityLiters) { this.capacityLiters = capacityLiters; }
     public BigDecimal getDeadStockLiters() { return deadStockLiters; }

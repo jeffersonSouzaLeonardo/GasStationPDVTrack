@@ -3,7 +3,7 @@
 <?import javafx.scene.layout.*?>
 
 <StackPane fx:id="root" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-           fx:controller="com.br.manager.controller.ConcentratorController">
+           fx:controller="com.br.manager.domain.integration.controller.ConcentratorController">
     <VBox styleClass="card" alignment="CENTER" spacing="20" maxWidth="420" maxHeight="-Infinity">
         <Label text="Concentrador" styleClass="page-title"/>
         <Label fx:id="statusLabel" styleClass="status-disconnected"/>

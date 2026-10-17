@@ -1,24 +1,27 @@
 package com.br.manager.domain.operational.dto;
 
+import com.br.manager.domain.operational.entity.Product;
+import com.br.manager.domain.operational.entity.Pump;
+import com.br.manager.domain.operational.entity.Tank;
+
 import java.math.BigDecimal;
-import java.util.UUID;
 
 public class NozzleInputDTO {
-    private UUID pumpId;
-    private UUID tankId;
+    private Pump pump;
+    private Tank tank;
     private String code;
-    private UUID productId;
+    private Product product;
     private BigDecimal meterNumber;
     private Boolean active;
 
-    public UUID getPumpId() { return pumpId; }
-    public void setPumpId(UUID pumpId) { this.pumpId = pumpId; }
-    public UUID getTankId() { return tankId; }
-    public void setTankId(UUID tankId) { this.tankId = tankId; }
+    public Pump getPump() { return pump; }
+    public void setPump(Pump pump) { this.pump = pump; }
+    public Tank getTank() { return tank; }
+    public void setTank(Tank tank) { this.tank = tank; }
     public String getCode() { return code; }
     public void setCode(String code) { this.code = code; }
-    public UUID getProductId() { return productId; }
-    public void setProductId(UUID productId) { this.productId = productId; }
+    public Product getProduct() { return product; }
+    public void setProduct(Product product) { this.product = product; }
     public BigDecimal getMeterNumber() { return meterNumber; }
     public void setMeterNumber(BigDecimal meterNumber) { this.meterNumber = meterNumber; }
     public Boolean getActive() { return active; }

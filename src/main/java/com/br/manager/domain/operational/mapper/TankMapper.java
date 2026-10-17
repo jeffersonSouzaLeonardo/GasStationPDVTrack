@@ -10,11 +10,18 @@ import java.util.stream.Collectors;
 
 @Component
 public class TankMapper {
+
+    private final ProductMapper productMapper;
+
+    public TankMapper(ProductMapper productMapper) {
+        this.productMapper = productMapper;
+    }
+
     public Tank toEntity(TankInputDTO dto) {
         if (dto == null) return null;
         Tank t = new Tank();
         t.setCode(dto.getCode());
-        t.setProductId(dto.getProductId());
+        t.setProduct(dto.getProduct());
         t.setCapacityLiters(dto.getCapacityLiters());
         t.setDeadStockLiters(dto.getDeadStockLiters());
         t.setCurrentBookLiters(dto.getCurrentBookLiters());
@@ -27,7 +34,7 @@ public class TankMapper {
         TankResponseDTO dto = new TankResponseDTO();
         dto.setId(t.getId());
         dto.setCode(t.getCode());
-        dto.setProductId(t.getProductId());
+        dto.setProduct(productMapper.toDto(t.getProduct()));
         dto.setCapacityLiters(t.getCapacityLiters());
         dto.setDeadStockLiters(t.getDeadStockLiters());
         dto.setCurrentBookLiters(t.getCurrentBookLiters());
@@ -43,7 +50,7 @@ public class TankMapper {
     public void updateFromDto(TankInputDTO dto, Tank entity) {
         if (dto == null || entity == null) return;
         entity.setCode(dto.getCode());
-        entity.setProductId(dto.getProductId());
+        entity.setProduct(dto.getProduct());
         entity.setCapacityLiters(dto.getCapacityLiters());
         entity.setDeadStockLiters(dto.getDeadStockLiters());
         entity.setCurrentBookLiters(dto.getCurrentBookLiters());

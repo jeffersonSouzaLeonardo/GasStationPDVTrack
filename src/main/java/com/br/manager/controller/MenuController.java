@@ -2,7 +2,7 @@ package com.br.manager.controller;
 
 import com.br.manager.config.SpringFxmlLoader;
 import com.br.manager.navigation.Screen;
-import com.br.manager.view.PlaceholderView;
+import com.br.manager.domain.integration.view.PlaceholderView;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;

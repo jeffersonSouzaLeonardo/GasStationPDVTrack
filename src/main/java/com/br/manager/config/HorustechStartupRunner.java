@@ -1,6 +1,6 @@
 package com.br.manager.config;
 
-import com.br.manager.service.ConcentratorService;
+import com.br.manager.domain.integration.service.ConcentratorService;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
