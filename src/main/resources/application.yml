@@ -4,6 +4,10 @@ spring:
     banner-mode: "off"
   port: 8081
 
+app:
+  api:
+    base-url: http://localhost:8080
+
 horustech:
   # When true, the connection with the concentrator is opened on application startup
   enabled: false

@@ -2,7 +2,7 @@ package com.br.manager.domain.price.entity;
 
 import jakarta.persistence.*;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -23,7 +23,7 @@ public class PriceTable {
     private Boolean active = true;
 
     @Column(name = "created_at")
-    private OffsetDateTime createdAt;
+    private LocalDateTime createdAt;
 
     public UUID getId() { return id; }
     public void setId(UUID id) { this.id = id; }
@@ -33,6 +33,6 @@ public class PriceTable {
     public void setStationId(UUID stationId) { this.stationId = stationId; }
     public Boolean getActive() { return active; }
     public void setActive(Boolean active) { this.active = active; }
-    public OffsetDateTime getCreatedAt() { return createdAt; }
-    public void setCreatedAt(OffsetDateTime createdAt) { this.createdAt = createdAt; }
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }

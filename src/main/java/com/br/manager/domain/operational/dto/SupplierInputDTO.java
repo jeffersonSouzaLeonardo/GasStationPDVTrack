@@ -4,17 +4,17 @@ import com.br.manager.domain.operational.entity.Pump;
 import com.br.manager.domain.operational.entity.Tank;
 
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 public class SupplierInputDTO {
-    private OffsetDateTime dataTime;
+    private LocalDateTime dataTime;
     private Tank tank;
     private Pump pump;
     private BigDecimal volume;
     private BigDecimal totalValue;
 
-    public OffsetDateTime getDataTime() { return dataTime; }
-    public void setDataTime(OffsetDateTime dataTime) { this.dataTime = dataTime; }
+    public LocalDateTime getDataTime() { return dataTime; }
+    public void setDataTime(LocalDateTime dataTime) { this.dataTime = dataTime; }
 
     public Tank getTank() { return tank; }
     public void setTank(Tank tank) { this.tank = tank; }

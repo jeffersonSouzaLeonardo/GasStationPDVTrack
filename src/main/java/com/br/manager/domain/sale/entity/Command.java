@@ -4,7 +4,7 @@ import com.br.manager.domain.financial.entity.Cash;
 import com.br.manager.domain.price.entity.PriceTable;
 import com.br.manager.domain.operational.entity.User;
 import jakarta.persistence.*;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -15,7 +15,7 @@ public class Command {
     private UUID id;
 
     @Column(name = "data_time", nullable = false)
-    private OffsetDateTime dataTime;
+    private LocalDateTime dataTime;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id", nullable = false)
@@ -41,8 +41,8 @@ public class Command {
     public UUID getId() { return id; }
     public void setId(UUID id) { this.id = id; }
 
-    public OffsetDateTime getDataTime() { return dataTime; }
-    public void setDataTime(OffsetDateTime dataTime) { this.dataTime = dataTime; }
+    public LocalDateTime getDataTime() { return dataTime; }
+    public void setDataTime(LocalDateTime dataTime) { this.dataTime = dataTime; }
 
     public User getUser() { return user; }
     public void setUser(User user) { this.user = user; }

@@ -2,7 +2,7 @@ package com.br.manager.domain.operational.entity;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -13,7 +13,7 @@ public class Supply {
     private UUID id;
 
     @Column(name = "data_time", nullable = false)
-    private OffsetDateTime dataTime;
+    private LocalDateTime dataTime;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "tank_id", nullable = false)
@@ -32,8 +32,8 @@ public class Supply {
     public UUID getId() { return id; }
     public void setId(UUID id) { this.id = id; }
 
-    public OffsetDateTime getDataTime() { return dataTime; }
-    public void setDataTime(OffsetDateTime dataTime) { this.dataTime = dataTime; }
+    public LocalDateTime getDataTime() { return dataTime; }
+    public void setDataTime(LocalDateTime dataTime) { this.dataTime = dataTime; }
 
     public Tank getTank() { return tank; }
     public void setTank(Tank tank) { this.tank = tank; }

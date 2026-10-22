@@ -1,4 +1,4 @@
-package com.br.manager.domain.operational.scheduller;
+package com.br.manager.scheduller;
 
 import com.br.manager.domain.operational.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -15,10 +15,18 @@ public class OperationalScheduller {
     @Autowired
     private UserService userService;
 
-    @Scheduled( fixedDelay = 3000)
-    public void executeOperationalTasks() {
-        log.info("Executing operational tasks...");
-        userService.fetchUsers();
+    @Scheduled( fixedDelay = 30000)
+    public void fetchUsers() {
+        log.info("Busca de usuários iniciada...");
+        userService.synchronize();
     }
+
+    @Scheduled( fixedDelay = 20000)
+    public void persistUsers() {
+        log.info("Persistência de usuários iniciada...");
+        userService.persistUsers();
+    }
+
+
 }
 

@@ -1,6 +1,6 @@
 package com.br.manager.domain.price.dto;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class PriceTableResponseDTO {
@@ -8,7 +8,7 @@ public class PriceTableResponseDTO {
     private String name;
     private UUID stationId;
     private Boolean active;
-    private OffsetDateTime createdAt;
+    private LocalDateTime createdAt;
 
     public UUID getId() { return id; }
     public void setId(UUID id) { this.id = id; }
@@ -18,6 +18,6 @@ public class PriceTableResponseDTO {
     public void setStationId(UUID stationId) { this.stationId = stationId; }
     public Boolean getActive() { return active; }
     public void setActive(Boolean active) { this.active = active; }
-    public OffsetDateTime getCreatedAt() { return createdAt; }
-    public void setCreatedAt(OffsetDateTime createdAt) { this.createdAt = createdAt; }
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }

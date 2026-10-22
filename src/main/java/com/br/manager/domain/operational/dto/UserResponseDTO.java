@@ -8,7 +8,7 @@ public class UserResponseDTO {
     private String email;
     private String phone;
     private Boolean active;
-    private java.time.OffsetDateTime lastLoginAt;
+    private java.time.LocalDateTime lastLoginAt;
 
     public UUID getId() { return id; }
     public void setId(UUID id) { this.id = id; }
@@ -25,6 +25,6 @@ public class UserResponseDTO {
     public Boolean getActive() { return active; }
     public void setActive(Boolean active) { this.active = active; }
 
-    public java.time.OffsetDateTime getLastLoginAt() { return lastLoginAt; }
-    public void setLastLoginAt(java.time.OffsetDateTime lastLoginAt) { this.lastLoginAt = lastLoginAt; }
+    public java.time.LocalDateTime getLastLoginAt() { return lastLoginAt; }
+    public void setLastLoginAt(java.time.LocalDateTime lastLoginAt) { this.lastLoginAt = lastLoginAt; }
 }

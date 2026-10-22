@@ -1,6 +1,6 @@
 package com.br.manager.domain.operational.dto;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class ProductResponseDTO {
@@ -13,7 +13,7 @@ public class ProductResponseDTO {
     private String ncm;
     private String cest;
     private Boolean active;
-    private OffsetDateTime createdAt;
+    private LocalDateTime createdAt;
 
     public UUID getId() { return id; }
     public void setId(UUID id) { this.id = id; }
@@ -33,6 +33,6 @@ public class ProductResponseDTO {
     public void setCest(String cest) { this.cest = cest; }
     public Boolean getActive() { return active; }
     public void setActive(Boolean active) { this.active = active; }
-    public OffsetDateTime getCreatedAt() { return createdAt; }
-    public void setCreatedAt(OffsetDateTime createdAt) { this.createdAt = createdAt; }
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }

@@ -3,7 +3,7 @@ package com.br.manager.domain.financial.entity;
 import com.br.manager.domain.sale.entity.Command;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -28,7 +28,7 @@ public class Receipt {
     private PaymentMethod paymentMethod;
 
     @Column(name = "data_time", nullable = false)
-    private OffsetDateTime dataTime;
+    private LocalDateTime dataTime;
 
     @Column(name = "synchronize", nullable = false)
     private Boolean synchronize = false;
@@ -48,8 +48,8 @@ public class Receipt {
     public PaymentMethod getPaymentMethod() { return paymentMethod; }
     public void setPaymentMethod(PaymentMethod paymentMethod) { this.paymentMethod = paymentMethod; }
 
-    public OffsetDateTime getDataTime() { return dataTime; }
-    public void setDataTime(OffsetDateTime dataTime) { this.dataTime = dataTime; }
+    public LocalDateTime getDataTime() { return dataTime; }
+    public void setDataTime(LocalDateTime dataTime) { this.dataTime = dataTime; }
 
     public Boolean getSynchronize() { return synchronize; }
     public void setSynchronize(Boolean synchronize) { this.synchronize = synchronize; }

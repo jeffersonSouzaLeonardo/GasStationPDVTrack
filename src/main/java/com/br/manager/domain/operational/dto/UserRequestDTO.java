@@ -11,12 +11,13 @@ public class UserRequestDTO {
     private String passwordHash;
     private String phone;
     private Boolean active;
-    private java.time.OffsetDateTime lastLoginAt;
+    private java.time.LocalDateTime lastLoginAt;
+    private java.time.LocalDateTime dataExclusao;
 
     public UserRequestDTO() {
     }
 
-    public UserRequestDTO(UUID id, String name, String email, String login, String role, String passwordHash, String phone, Boolean active, java.time.OffsetDateTime lastLoginAt) {
+    public UserRequestDTO(UUID id, String name, String email, String login, String role, String passwordHash, String phone, Boolean active, java.time.LocalDateTime lastLoginAt, java.time.LocalDateTime dataExclusao) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -26,6 +27,7 @@ public class UserRequestDTO {
         this.phone = phone;
         this.active = active;
         this.lastLoginAt = lastLoginAt;
+        this.dataExclusao = dataExclusao;
     }
 
     public UUID getId() {
@@ -77,8 +79,11 @@ public class UserRequestDTO {
     public Boolean getActive() { return active; }
     public void setActive(Boolean active) { this.active = active; }
 
-    public java.time.OffsetDateTime getLastLoginAt() { return lastLoginAt; }
-    public void setLastLoginAt(java.time.OffsetDateTime lastLoginAt) { this.lastLoginAt = lastLoginAt; }
+    public java.time.LocalDateTime getLastLoginAt() { return lastLoginAt; }
+    public void setLastLoginAt(java.time.LocalDateTime lastLoginAt) { this.lastLoginAt = lastLoginAt; }
+
+    public java.time.LocalDateTime getDataExclusao() { return dataExclusao; }
+    public void setDataExclusao(java.time.LocalDateTime dataExclusao) { this.dataExclusao = dataExclusao; }
 
     @Override
     public String toString() {

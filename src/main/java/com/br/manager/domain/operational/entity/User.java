@@ -9,7 +9,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -41,7 +41,7 @@ public class User {
     private Boolean active = true;
 
     @Column(name = "last_login_at")
-    private OffsetDateTime lastLoginAt;
+    private LocalDateTime lastLoginAt;
 
     public UUID getId() {
         return id;
@@ -91,11 +91,11 @@ public class User {
         this.active = active;
     }
 
-    public OffsetDateTime getLastLoginAt() {
+    public LocalDateTime getLastLoginAt() {
         return lastLoginAt;
     }
 
-    public void setLastLoginAt(OffsetDateTime lastLoginAt) {
+    public void setLastLoginAt(LocalDateTime lastLoginAt) {
         this.lastLoginAt = lastLoginAt;
     }
 }

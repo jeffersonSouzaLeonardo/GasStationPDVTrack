@@ -1,12 +1,12 @@
 package com.br.manager.domain.operational.dto;
 
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class SupplierResponseDTO {
     private UUID id;
-    private OffsetDateTime dataTime;
+    private LocalDateTime dataTime;
     private TankResponseDTO tank;
     private PumpResponseDTO pump;
     private BigDecimal volume;
@@ -15,8 +15,8 @@ public class SupplierResponseDTO {
     public UUID getId() { return id; }
     public void setId(UUID id) { this.id = id; }
 
-    public OffsetDateTime getDataTime() { return dataTime; }
-    public void setDataTime(OffsetDateTime dataTime) { this.dataTime = dataTime; }
+    public LocalDateTime getDataTime() { return dataTime; }
+    public void setDataTime(LocalDateTime dataTime) { this.dataTime = dataTime; }
 
     public TankResponseDTO getTank() { return tank; }
     public void setTank(TankResponseDTO tank) { this.tank = tank; }
