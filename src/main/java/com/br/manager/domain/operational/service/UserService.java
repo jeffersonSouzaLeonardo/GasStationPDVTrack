@@ -95,5 +95,9 @@ public class UserService {
         userRepository.saveAllAndFlush(users);
     }
 
+    public List<User> findAllActive() {
+        return userRepository.findByActiveTrueOrderByName();
+    }
+
 
 }

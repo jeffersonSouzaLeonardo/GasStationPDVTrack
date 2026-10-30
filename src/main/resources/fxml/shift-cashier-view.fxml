@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.br.manager.domain.shift.controller.ShiftCashierController">
+    <VBox styleClass="card" spacing="18" maxWidth="560" maxHeight="-Infinity">
+        <Label text="Turno/Caixa" styleClass="page-title"/>
+        <Label fx:id="sessionInfoLabel" styleClass="info-label" wrapText="true" maxWidth="480"/>
+
+        <VBox spacing="8">
+            <Label text="Operador" styleClass="field-label"/>
+            <ComboBox fx:id="operatorCombo" promptText="Selecione o usuário" maxWidth="Infinity"/>
+        </VBox>
+
+        <VBox spacing="8">
+            <Label text="Turno" styleClass="field-label"/>
+            <HBox spacing="12" alignment="CENTER_LEFT">
+                <ComboBox fx:id="shiftCombo" promptText="Selecione o turno" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                <Button fx:id="newShiftButton" text="Novo Turno" styleClass="secondary-button" onAction="#onNewShift"/>
+            </HBox>
+        </VBox>
+
+        <VBox spacing="8">
+            <Label text="Abertura de Caixa" styleClass="section-title"/>
+            <HBox spacing="12" alignment="CENTER_LEFT">
+                <TextField fx:id="openingAmountField" promptText="Valor inicial (ex.: 100,00)" HBox.hgrow="ALWAYS"/>
+                <Button fx:id="openSessionButton" text="Abrir Caixa" styleClass="primary-button" onAction="#onOpenSession"/>
+            </HBox>
+        </VBox>
+
+        <VBox spacing="8">
+            <Label text="Fechamento de Caixa" styleClass="section-title"/>
+            <HBox spacing="12" alignment="CENTER_LEFT">
+                <TextField fx:id="closingAmountField" promptText="Valor final (ex.: 350,00)" HBox.hgrow="ALWAYS"/>
+                <Button fx:id="closeSessionButton" text="Fechar Caixa" styleClass="primary-button" onAction="#onCloseSession"/>
+            </HBox>
+        </VBox>
+
+        <Label fx:id="messageLabel" wrapText="true" maxWidth="480"/>
+        <Button text="Voltar" styleClass="secondary-button" onAction="#onBack"/>
+    </VBox>
+</StackPane>

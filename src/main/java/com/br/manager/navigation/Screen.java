@@ -4,7 +4,7 @@ public enum Screen {
     MENU("/fxml/menu-view.fxml"),
     COMMANDS(null, "Comandas"),
     FUELINGS(null, "Abastecimentos"),
-    SHIFT_CASHIER(null, "Turno/Caixa"),
+    SHIFT_CASHIER("/fxml/cash-session-list-view.fxml", "Turno/Caixa"),
     CONCENTRATOR("/fxml/concentrator-view.fxml", "Concentrador"),
     USER(null, "Usuário");
 
