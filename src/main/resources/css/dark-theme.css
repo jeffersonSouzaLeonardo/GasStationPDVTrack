@@ -25,3 +25,39 @@
     -fx-border-color: #2c3347; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10 40; -fx-cursor: hand;
 }
 .secondary-button:hover { -fx-background-color: #1f2535; -fx-text-fill: #ffffff; }
+
+.field-label { -fx-text-fill: #9aa3b5; -fx-font-size: 13px; }
+.section-title { -fx-text-fill: #e6e9f0; -fx-font-size: 15px; -fx-font-weight: bold; }
+.info-label { -fx-text-fill: #9aa3b5; -fx-font-size: 13px; }
+
+.combo-box, .text-field {
+    -fx-background-color: #1f2535; -fx-text-fill: #e6e9f0;
+    -fx-background-radius: 8; -fx-border-color: #2c3347; -fx-border-radius: 8; -fx-padding: 8 12;
+}
+.combo-box .list-cell { -fx-text-fill: #e6e9f0; -fx-background-color: transparent; }
+.combo-box .combo-box-popup .list-view {
+    -fx-background-color: #1f2535; -fx-border-color: #2c3347;
+}
+.combo-box .combo-box-popup .list-cell { -fx-text-fill: #e6e9f0; }
+.combo-box .combo-box-popup .list-cell:hover { -fx-background-color: #2d6cdf; }
+.text-field { -fx-prompt-text-fill: #5b6478; }
+
+.table-view {
+    -fx-background-color: transparent; -fx-border-color: #232838; -fx-border-radius: 8; -fx-background-radius: 8;
+}
+.table-view .column-header-background { -fx-background-color: #1f2535; -fx-background-radius: 8 8 0 0; }
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent; -fx-border-color: #232838; -fx-border-width: 0 0 1 0;
+}
+.table-view .column-header .label { -fx-text-fill: #9aa3b5; -fx-font-weight: bold; }
+.table-view .cell { -fx-text-fill: #e6e9f0; -fx-border-color: transparent; -fx-padding: 8; }
+.table-row-cell { -fx-background-color: transparent; -fx-border-color: #232838; -fx-border-width: 0 0 1 0; }
+.table-row-cell:odd { -fx-background-color: #141824; }
+.table-row-cell:selected { -fx-background-color: #2d6cdf; }
+.table-view .placeholder .label { -fx-text-fill: #5b6478; }
+
+.table-action-button {
+    -fx-background-color: #2d6cdf; -fx-text-fill: white; -fx-font-size: 12px;
+    -fx-padding: 4 14; -fx-background-radius: 6; -fx-cursor: hand;
+}
+.table-action-button:hover { -fx-background-color: #4180f0; }
